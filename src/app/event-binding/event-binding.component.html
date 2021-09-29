@@ -1,0 +1,7 @@
+<h4>Event Binding</h4>
+<button class="botao" (click)="firstEvent()">this is a button</button><br>
+<input type="text" 
+(keyup)="onKeyPress($event)"
+(keyup.enter)="saveTheValor($event)"><br>
+<h1 style="color: rgb(11, 62, 172);">{{ valorOfInput }}</h1>
+<h1 style="color: rgb(11, 62, 172);">{{ saveValor }}</h1>

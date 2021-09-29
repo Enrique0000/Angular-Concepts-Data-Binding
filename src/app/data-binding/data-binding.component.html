@@ -1,0 +1,46 @@
+<section class="section1">
+    <article>
+        <h2>Interpolação!</h2>
+        <a>Acesse o link do facebook: {{ url }}</a>
+        <p>Essa conta (4/2) irá resultar em 2: {{ 4/2 }}</p>
+        <a>120 é {{ getNumber() }}</a>
+        <p> verdade é {{ myTrue }}</p>
+    </article>
+    <article>
+        <label>Acredito que seja uma espécie de leopardo cinza - Property Binding</label><br>
+        <img src="{{ urlAnimal }}">
+        <img [src]="urlAnimal">
+        <img bind-src="urlAnimal">
+    </article>
+    <article>
+        <h3>Classes e Styling Binding</h3>
+        <div>
+        <select #classe (change) ="0">
+            <option value="maio">maionese</option>
+            <option value="ket">ketchup</option>
+            <option value="most">mostarda</option>
+            <option value="barb">barbecue</option>
+        </select>
+
+        <div class="molhos {{classe.value}}">
+            Altere a cor dos molhos
+        </div>
+
+        <div class="change1" role="change"
+        [class.maio]="classe.value === 'maio'">maionese</div>
+        <div class="change2" role="change"
+        [class.ket]="classe.value === 'ket'">ketchup</div>
+        <div class="change3" role="change"
+        [class.most]="classe.value === 'most'">mostarda</div>
+        <div class="change4" role="change"
+        [class.barb]="classe.value === 'barb'">barbecue</div>
+        </div>
+
+        <div class="most" role="most"
+        [style.display]="classe.value === 'most' ? 'block' : 'none'">
+        mostarda
+        </div>
+    </article>
+</section>
+
+<countdown [valor]="valorSete"></countdown>

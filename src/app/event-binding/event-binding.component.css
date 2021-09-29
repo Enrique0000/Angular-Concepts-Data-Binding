@@ -1,0 +1,6 @@
+.botao{
+    border: none;
+    border-radius: 5%;
+    background-color: aqua;
+    cursor: pointer;
+}

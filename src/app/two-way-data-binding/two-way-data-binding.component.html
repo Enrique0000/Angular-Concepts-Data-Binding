@@ -1,0 +1,7 @@
+<h4>Two Way Data Binding</h4>
+<input type="password"
+[ngModel]="password"
+(ngModelChange)="password = $event">
+<input type="password" [(ngModel)]="password">
+
+<h5>Your password: {{ password }}</h5>
